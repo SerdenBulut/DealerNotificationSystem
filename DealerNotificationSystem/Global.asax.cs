@@ -12,6 +12,7 @@ namespace DealerNotificationSystem
     {
         protected void Application_Start()
         {
+// Denmee
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
