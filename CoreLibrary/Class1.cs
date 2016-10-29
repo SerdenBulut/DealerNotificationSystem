@@ -8,5 +8,6 @@ namespace CoreLibrary
 {
     public class Class1
     {
+        //TODO test
     }
 }
