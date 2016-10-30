@@ -1,0 +1,68 @@
+﻿@model DealerNotificationSystem.Models.LoginViewModel
+
+@{
+    Layout = null;
+}
+
+<html lang="tr">
+<head>
+    <title>BBS Kullanıcı Girişi</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
+    <script src="~/Scripts/plugins/jquery-3.1.1.min.js"></script>
+    <script src="~/Scripts/plugins/bootstrap.min.js"></script>
+</head>
+<body class="container">
+        <div class="card card-container">
+           
+            <!-- BEGIN LOGIN FORM -->
+            @using (Html.BeginForm("Login", "Account", new { returnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form - signin", id = "userLoginPanel" }))
+            {
+                @Html.AntiForgeryToken()
+                <h3 class="form-title">BBS Kullanıcı Girişi</h3>
+
+                if (ViewContext.ViewData.ModelState.Values.Any(i => i.Errors.Any()))
+                {
+                    <div class="alert alert-danger display-hide" style="display: block;">
+                        <button class="close" data-close="alert"></button>
+                        <span>
+                            @Html.ValidationSummary()
+                        </span>
+                    </div>
+                }
+
+                <div class="form-group">
+                    <div class="input-icon">
+                        <i class="fa fa-user"></i>
+                        @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", type = "text", autocomplete = "off", placeholder = "Kullanıcı Adı", autofocus = "autofocus" })
+                    </div>
+                    @Html.ValidationMessageFor(m => m.UserName)
+                </div>
+
+                <div class="form-group">
+                    <div class="input-icon">
+                        <i class="fa fa-lock"></i>
+                        @Html.TextBoxFor(m => m.Password, new { @class = "form-control", type = "password", autocomplete = "off", placeholder = "Şifre", data_copy = "false" })
+                    </div>
+                    @Html.ValidationMessageFor(m => m.Password)
+                </div>
+
+                <div class="form-actions">
+                    <a href="javascript:;" id="forgetPassword" class="forget-password">Şifremi Unuttum?</a>
+                    <input type="submit" class="pull-right btn btn-primary" value="Giriş" />
+                    <div class="clearfix"></div>
+                </div>
+
+                <div class="create-account">
+                    <p style="color: #c3cedd; font-size: medium;">
+                        <b>B</b>ayi <b>B</b>ildirim <b>S</b>istemi
+                    </p>
+                </div>
+            }
+        </div>
+
+        <div class="copyright"> 2016 © SS Corporation. </div>
+    </div>
+</body>
+
+</html>
