@@ -1,4 +1,4 @@
-﻿namespace CoreLibrary.UnitOfWork
+﻿namespace Core.UnitOfWork.Interface
 {
     public interface IUnitData 
     {

@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
+﻿using System.ComponentModel.DataAnnotations;
 
-namespace DealerNotificationSystem.Models
+namespace DNS.Web.Models
 {
     public sealed class LoginViewModel
     {

@@ -1,13 +1,13 @@
-﻿using CoreLibrary.Interface;
-using System;
+﻿using System;
 using System.Data.Entity;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Linq.Expressions;
 using System.Data.Entity.Infrastructure;
-using CoreLibrary.Data;
+using System.Linq;
+using System.Linq.Expressions;
+using System.Threading.Tasks;
+using Core.Data;
+using Core.Repository.Interface;
 
-namespace CoreLibrary.Repository
+namespace Core.Repository
 {
     /// <summary>
     /// </summary>

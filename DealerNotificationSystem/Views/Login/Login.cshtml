@@ -1,4 +1,4 @@
-﻿@model DealerNotificationSystem.Models.LoginViewModel
+﻿@model DNS.Web.Models.LoginViewModel
 
 @{
     Layout = null;
@@ -16,7 +16,7 @@
         <div class="card card-container">
            
             <!-- BEGIN LOGIN FORM -->
-            @using (Html.BeginForm("Login", "Account", new { returnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form - signin", id = "userLoginPanel" }))
+            @using (Html.BeginForm("Login", "Login", new { returnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", id = "userLoginPanel" }))
             {
                 @Html.AntiForgeryToken()
                 <h3 class="form-title">BBS Kullanıcı Girişi</h3>
@@ -62,7 +62,6 @@
         </div>
 
         <div class="copyright"> 2016 © SS Corporation. </div>
-    </div>
 </body>
 
 </html>

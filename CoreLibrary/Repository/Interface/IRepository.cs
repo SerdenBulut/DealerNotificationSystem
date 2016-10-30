@@ -1,12 +1,9 @@
-﻿using CoreLibrary.Data;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
+using Core.Data;
 
-namespace CoreLibrary.Interface
+namespace Core.Repository.Interface
 {
     /// <summary>
     /// Model katmanımızda bulunan her T tipi için aşağıda tanımladığımız fonksiyonları gerçekleştirebilecek generic bir repository tanımlıyoruz.

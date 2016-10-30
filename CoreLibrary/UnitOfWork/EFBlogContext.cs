@@ -1,6 +1,6 @@
-﻿namespace CoreLibrary.UnitOfWork
+﻿namespace Core.UnitOfWork
 {
-    internal class EFBlogContext
+    internal class EfBlogContext
     {
     }
 }
