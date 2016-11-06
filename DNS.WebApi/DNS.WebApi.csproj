@@ -150,12 +150,18 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Dealer\" />
+    <Folder Include="Views\DnsEntity\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Code\DnsEntityController.cs" />
+    <Compile Include="Code\EntityController.cs" />
+    <Compile Include="Code\EntityControllerBase.cs" />
+    <Compile Include="Controllers\DealerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -174,7 +180,20 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\CoreLibrary\Core.csproj">
+      <Project>{52D38ED6-5BF8-4C02-8A1E-FFC91D395620}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dns.Business\Dns.Business.csproj">
+      <Project>{5e9d4a89-ac5e-422e-a478-d68f9f19496a}</Project>
+      <Name>Dns.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dns.DbContext\Dns.DbContext.csproj">
+      <Project>{9A8538E2-18D9-449C-B491-DCE730400163}</Project>
+      <Name>Dns.DbContext</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
