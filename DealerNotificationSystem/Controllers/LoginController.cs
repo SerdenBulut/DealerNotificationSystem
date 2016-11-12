@@ -9,5 +9,10 @@ namespace DNS.Web.Controllers
         {
             return View();
         }
+
+        public ActionResult LoginOperation()
+        {
+            return Redirect("/Home/Index");
+        }
     }
 }

@@ -16,5 +16,10 @@ namespace DNS.WebApi.Controllers
         {
 
         }
+
+        public IList<Dealer> GetDealers()
+        {
+            return this.BusinessUnit.ListNoTracking().ToList();
+        }
     }
 }

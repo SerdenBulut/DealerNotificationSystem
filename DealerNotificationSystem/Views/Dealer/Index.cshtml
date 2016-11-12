@@ -1,0 +1,25 @@
+﻿@using System.Threading.Tasks
+@using Dns.DbContext
+@using Kendo.Mvc.UI
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+@*@(Html.Kendo().Grid((IEnumerable<Dealer>)ViewBag.Products)
+          .Name("grid")
+          .Columns(columns =>
+          {
+              columns.Bound(product => product.Id);
+              columns.Bound(product => product.Name);
+          })
+)*@
+<script>
+    $(function() {
+        //Notice that the Name() of the Grid is used to get its client-side instance.
+        var grid = $("#grid").data("kendoGrid");
+    });
+</script>
