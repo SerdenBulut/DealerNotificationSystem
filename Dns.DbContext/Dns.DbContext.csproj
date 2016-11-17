@@ -57,52 +57,38 @@
   <ItemGroup>
     <Compile Include="Base\IBaseEntity.cs" />
     <Compile Include="Dealer.cs">
-      <DependentUpon>DnsEntityModel.tt</DependentUpon>
+      <DependentUpon>DNSModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DnsEntityModel.Context.cs">
+    <Compile Include="DNSModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DnsEntityModel.Context.tt</DependentUpon>
+      <DependentUpon>DNSModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="DnsEntityModel.cs">
+    <Compile Include="DNSModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DnsEntityModel.tt</DependentUpon>
+      <DependentUpon>DNSModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DnsEntityModel.Designer.cs">
+    <Compile Include="DNSModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DnsEntityModel.edmx</DependentUpon>
+      <DependentUpon>DNSModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User.cs">
-      <DependentUpon>DnsEntityModel.tt</DependentUpon>
+      <DependentUpon>DNSModel.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="DnsEntityModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DnsEntityModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.Config" />
-    <None Include="DnsEntityModel.edmx.diagram">
-      <DependentUpon>DnsEntityModel.edmx</DependentUpon>
+    <EntityDeploy Include="DNSModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DNSModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DNSModel.edmx.diagram">
+      <DependentUpon>DNSModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="DnsEntityModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DnsEntityModel.edmx</DependentUpon>
-      <LastGenOutput>DnsEntityModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="DnsEntityModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DnsEntityModel.edmx</DependentUpon>
-      <LastGenOutput>DnsEntityModel.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -112,6 +98,18 @@
       <Project>{52D38ED6-5BF8-4C02-8A1E-FFC91D395620}</Project>
       <Name>Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DNSModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DNSModel.edmx</DependentUpon>
+      <LastGenOutput>DNSModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DNSModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DNSModel.edmx</DependentUpon>
+      <LastGenOutput>DNSModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

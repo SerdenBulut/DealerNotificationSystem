@@ -43,6 +43,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
     <Reference Include="Kendo.Mvc, Version=2016.2.616.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Kendo.Mvc.2016.2.616\lib\net451\Kendo.Mvc.dll</HintPath>
       <Private>True</Private>
