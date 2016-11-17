@@ -2,7 +2,7 @@
 <#@ include file="EF6.Utility.CS.ttinclude"#><#@ 
  output extension=".cs"#><#
 
-const string inputFile = @"DnsEntityModel.edmx";
+const string inputFile = @"DNSModel.edmx";
 var textTransform = DynamicTextTransformation.Create(this);
 var code = new CodeGenerationTools(this);
 var ef = new MetadataTools(this);
@@ -313,17 +313,13 @@ public class CodeStringGenerator
     
     public string EntityClassOpening(EntityType entity)
     {
-	EdmProperty idProperty = entity.Properties.Where(x => x.Name == "Id").SingleOrDefault();       
-	string idTypeName = _typeMapper.GetTypeName(idProperty.TypeUsage);
-
         return string.Format(
             CultureInfo.InvariantCulture,
-            "{0} " + Environment.NewLine + " {1} {2} partial class {3}{4}", 
-            "[Serializable]", 
+            "{0} {1}partial class {2}{3}",
             Accessibility.ForType(entity),
             _code.SpaceAfter(_code.AbstractOption(entity)),
             _code.Escape(entity),
-            _code.StringBefore(" : ", _typeMapper.GetTypeName(entity.BaseType) ?? (idTypeName == "int" ? "IBaseEntity" :  ( "IBaseEntity<" + idTypeName + ">" ))));
+            _code.StringBefore(" : ", _typeMapper.GetTypeName(entity.BaseType)));
     }
     
     public string EnumOpening(SimpleType enumType)
@@ -429,7 +425,7 @@ public class CodeStringGenerator
         return inHeader == string.IsNullOrEmpty(_code.VsNamespaceSuggestion())
             ? string.Format(
                 CultureInfo.InvariantCulture,
-                "{0}using System; using Dns.DbContext.Base; {1}" +
+                "{0}using System;{1}" +
                 "{2}",
                 inHeader ? Environment.NewLine : "",
                 includeCollections ? (Environment.NewLine + "using System.Collections.Generic;") : "",

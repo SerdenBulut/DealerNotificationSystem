@@ -9,11 +9,10 @@
 
 namespace Dns.DbContext
 {
-    using System; using Dns.DbContext.Base; 
+    using System;
     using System.Collections.Generic;
     
-    [Serializable] 
-     public  partial class User : IBaseEntity
+    public partial class User
     {
         public int Id { get; set; }
         public System.DateTime CreateTime { get; set; }
